@@ -1,0 +1,40 @@
+PERSONALIZADOR F6201B — NETFLEX
+
+Abra Personalizador_F6201B_Netflex.exe. Conecte uma ONT por vez à Ethernet do PC.
+O programa detecta o IP automaticamente. O login web inicial é multipro / multipro.
+Confira os campos na janela antes de clicar em “Personalizar ONT”.
+
+A ferramenta prepara a frase “Bem-vindo, cliente Netflex.”, a logo no login e no
+cabeçalho, os menus azul e laranja e o botão Sair alinhado. Ela detecta o MAC de cada
+ONT, gera o acesso Telnet temporário, salva backups,
+grava os dois bancos de firmware, um de cada vez, e verifica o visual após cada reinício.
+Em Rede local > Status, a área de clientes Wi-Fi mostra RSSI e se atualiza a cada
+2 segundos enquanto estiver aberta. RSSI indica sinal recebido, não distância em metros.
+
+O botão “Restaurar interface ZTE” recoloca os arquivos originais nos dois bancos.
+Ele salva os blocos anteriores em backups, reinicia a ONT e confere a interface.
+Esse botão restaura somente o visual: nomes Wi-Fi e demais configurações permanecem.
+Depois de restaurar, é possível aplicar novamente o tema Netflex: o programa
+identifica as camadas anteriores e usa o próximo bloco vazio validado.
+
+Com a opção Wi-Fi marcada, as redes principais de 2,4 e 5 GHz recebem o mesmo nome:
+Netflex_XXXX. XXXX são os quatro últimos caracteres hexadecimais do MAC da ONT.
+A configuração atual é salva em backups antes da alteração. As senhas Wi-Fi não
+são modificadas.
+
+Use “Verificar reset físico” depois de um reset para conferir visual e nomes Wi-Fi.
+O reset apaga as configurações operacionais da ONT. O teste ainda precisa ser feito
+em uma ONT nova com a alteração Wi-Fi para confirmar que o nome persiste.
+
+Compatibilidade: ZXHN F6201B UNI com firmware V9.3.10P7N6 ou V9.3.10P7N7 e
+imagem original igual à usada na validação. A ferramenta identifica a versão e
+interrompe o processo se encontrar firmware, layout ou imagem diferentes.
+No N6, são reconhecidas a imagem original direta e a variante com cabeçalho
+de firmware; ambas exigem o mesmo sistema de arquivos validado e CRC íntegro.
+
+Backups e resultado de cada execução ficam na pasta “backups” ao lado do programa.
+Guarde a pasta inteira do programa para que o EXE encontre seus arquivos de apoio.
+
+Para executar o código-fonte em vez do EXE: Python 3.12, requests e pycryptodome.
+Comando: python -m pip install -r requirements.txt
+Depois abra “Personalizador F6201B.pyw”.

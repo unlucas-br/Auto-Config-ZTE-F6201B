@@ -1,0 +1,8 @@
+{
+  "name": "Netflex",
+  "wifi_prefix": "Netflex",
+  "accent": "#2345a6",
+  "accent_dark": "#173681",
+  "welcome": "Bem-vindo, cliente Netflex.",
+  "logo": "Logo_ZTE.png"
+}

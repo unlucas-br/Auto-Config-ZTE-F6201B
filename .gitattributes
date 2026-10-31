@@ -1,0 +1,2 @@
+# JFFS2 resource hashes require byte-exact checkouts on Windows.
+* -text

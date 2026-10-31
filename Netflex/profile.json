@@ -1,0 +1,76 @@
+{
+  "model": "ZXHN F6201B UNI",
+  "version": "V9.3.10P7N6",
+  "bank_image_size": 26738688,
+  "block_offset_in_partition": 26869760,
+  "block_size": 131072,
+  "page_size": 2048,
+  "chunk_size": 4096,
+  "bank_sha256": {
+    "mtd7": "4dfa5a48783f28c4a122aea97e490e9670b1f50590062bd014d00d29229476ad",
+    "mtd8": "4dfa5a48783f28c4a122aea97e490e9670b1f50590062bd014d00d29229476ad"
+  },
+  "wrapped_rootfs_sha256": "dff5533b2fc591a18b0e7c22a651523bc211db82d92f8dc608fb2c6a41439980",
+  "resource_sha256": {
+    "commonpage.css": "15f41f510f744bd58ea336e8e0a05752d659892b5ffde800ef22cb5d2a44df0d",
+    "home.css": "f7339ecda99fe00bb5f31323f01c10bc6c5efb846b81dba885f834ee37e526ce",
+    "login.css": "ef2dcc5cd1acad3d00c218c23aef422189e4ef3c3f05d2cec8a7d9d2766a8f5d",
+    "login_t.lp": "c761692103cec1db5b1a9347092282c8138d1d5b50417257e795bd5a5d1509e3",
+    "Logo_ZTE.png": "70202b709203626367624ddf41a5c621d2ffd1c6e22230b2dbe48979d43eec91",
+    "template.css": "9e672ce96d923defcee9e0b8853d04311c6f5a7ad8c86d7a25551692034bad25",
+    "wlan_client_stat_js.lp": "25076ffbb5b3579329051396aab725439384934786a7d3799b612c46c8a64429"
+  },
+  "inodes": {
+    "login.css": {
+      "ino": 1003,
+      "highest_version": 1,
+      "header_hex": "851902e0990100006ef00b4deb03000001000000a481000000000000910200005be6b6675be6b6675be6b66700000000550100009102000006000000c0c84a7385792c67"
+    },
+    "Logo_ZTE.png": {
+      "ino": 1023,
+      "highest_version": 1,
+      "header_hex": "851902e0f705000082d8fb91ff03000001000000a481000000000000b30500005be6b6675be6b6675be6b66700000000b3050000b305000000000000105f9015b490399a"
+    },
+    "template.css": {
+      "ino": 1004,
+      "highest_version": 3,
+      "header_hex": "851902e02606000027b8550dec03000001000000ed81000000000000ea2d00005be6b6675be6b6675be6b66700000000e2050000001000000600000035a9e41998e135e4"
+    },
+    "commonpage.css": {
+      "ino": 1001,
+      "highest_version": 2,
+      "header_hex": "851902e09c05000080a8dc7de903000001000000a481000000000000eb1800005be6b6675be6b6675be6b667000000005805000000100000060000006847d9693dc0832c"
+    },
+    "home.css": {
+      "ino": 1002,
+      "highest_version": 2,
+      "header_hex": "851902e0cc04000015cd13b7ea03000001000000a481000000000000851200005be6b6675be6b6675be6b667000000008804000000100000060000007bdfbf9642cd1f78"
+    },
+    "login_t.lp": {
+      "ino": 1250,
+      "highest_version": 1,
+      "header_hex": "851902e05f030000da95a91de204000001000000ed81000000000000990700005be6b6675be6b6675be6b667000000001b0300009907000006000000a02eaf04bc45bbcf"
+    },
+    "wlan_client_stat_js.lp": {
+      "ino": 1895,
+      "highest_version": 1,
+      "header_hex": "851902e073040000d99302f26707000001000000a481000000000000390a00005ce6b6675ce6b6675ce6b667000000002f040000390a0000060000003d564a4f6b4aee65"
+    }
+  },
+  "resource_dir": "resources",
+  "bank_image_offset": 131072,
+  "boot_markers": {
+    "mtd7": "0x1a20000",
+    "mtd8": "0x3a20000"
+  },
+  "stock_resource_dir": "stock_n6",
+  "stock_resource_sha256": {
+    "commonpage.css": "2a896a7c2425a00f000faa508bfefe43d4d4d13e1982e4f3bfa99c5056811eba",
+    "home.css": "9301139aa817f961c01a5b2960c414296704e51a48cd0eae523f0f8d0cfaf670",
+    "login.css": "618ed548aa1edb60f298dfa14099000ab0ceacbe99435571f3b4383973cdd6b1",
+    "login_t.lp": "c761692103cec1db5b1a9347092282c8138d1d5b50417257e795bd5a5d1509e3",
+    "Logo_ZTE.png": "be5755ccb9383d9a4e4f1a6042ebf7bca928f983c7ae7e3b67d63aba1ad88599",
+    "template.css": "d04000ce68647742d8fd5d197ed17d4245b2f77f756624427b5e263113ef30b8",
+    "wlan_client_stat_js.lp": "6d54da4faf3b6335b4d2ada11d8051dfd9239a7b67daff01c912c76965c089fd"
+  }
+}
