@@ -51,6 +51,7 @@ Plataforma das builds: **Windows 64 bits**
 - Backup e conferência byte a byte dos blocos gravados.
 - Personalização dos dois bancos para preservar o visual após reset físico.
 - Botão para restaurar apenas a interface original da ZTE.
+- Módulo experimental de proteção DNS da Atuamax, instalado separadamente na ONT, com importação de listas locais e teste de bloqueio por cinco minutos em um PC.
 
 RSSI é intensidade de sinal em dBm; não representa distância em metros.
 
@@ -76,6 +77,8 @@ python "Personalizador F6201B.pyw"
 ```
 
 Para gerar uma nova build, consulte [BUILD.md](docs/BUILD.md).
+
+O [módulo experimental de proteção DNS](Atuamax/experimental_dns/README.md) fica na pasta Atuamax e usa um instalador Python próprio. Ele não faz parte do ZIP do personalizador nem é instalado automaticamente ao personalizar a interface.
 
 ---
 
@@ -103,6 +106,7 @@ Os backups de cada execução ficam na pasta `backups/` ao lado do programa e **
 ```text
 .
 ├── Atuamax/                # fonte, temas N6/N7 e pacote Windows da Atuamax
+│   └── experimental_dns/    # painel DNS experimental, binários ARM e código-fonte
 ├── Netflex/                # fonte, temas N6/N7 e pacote Windows da Netflex
 ├── firmware/               # imagens de banco de referência e SHA-256
 ├── docs/                   # obtenção, processo e build

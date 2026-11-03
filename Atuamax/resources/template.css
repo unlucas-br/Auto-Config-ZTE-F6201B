@@ -960,3 +960,119 @@ body { background: #f2f5fb; }
 /* Atualização periódica do sinal dos clientes Wi-Fi. */
 #Wlan_ClientStat .rssiLiveStatus { margin: 10px 0 14px; padding: 9px 12px; border-left: 4px solid #ec5a16; background: #f7f9fc; color: #314052; font: 13px/1.4 Arial, sans-serif; }
 #Wlan_ClientStat [id^='RSSI'] { font-weight: 700; }
+
+/* Atuamax: compact header with a clear action group. */
+#banner {
+  background: linear-gradient(105deg, #cf3b0b 0%, #eb5311 48%, #fb7422 100%);
+  box-shadow: 0 5px 18px rgba(112, 43, 14, .16);
+}
+#banner::before {
+  top: 10px;
+  left: 24px;
+  width: 112px;
+  height: 68px;
+  border-radius: 0;
+  background: transparent url('/img/Logo_ZTE.png') center / contain no-repeat;
+  filter: brightness(0) invert(1);
+}
+#banner .timeArea {
+  top: 50%;
+  bottom: auto;
+  left: 158px;
+  width: auto;
+  height: auto;
+  padding: 8px 0 8px 18px;
+  border-left: 1px solid rgba(255,255,255,.32);
+  color: rgba(255,255,255,.92);
+  font: 500 12px/18px "Segoe UI", Arial, sans-serif;
+  transform: translateY(-50%);
+}
+#banner #banner_switchArea {
+  top: 0;
+  right: 20px;
+  bottom: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  width: auto;
+  height: 88px;
+  padding: 0;
+}
+#banner #banner_switchArea > div:not(#logOff) {
+  float: none !important;
+  margin: 0 !important;
+}
+#banner #quicksetup { order: 0; }
+#banner #quicksetup > div {
+  margin: 0 !important;
+  padding: 10px 12px;
+  border-radius: 7px;
+  color: #fff !important;
+  font: 600 12px/18px "Segoe UI", Arial, sans-serif;
+}
+#banner #quicksetup > div:hover,
+#banner #quicksetup > div:focus { background: rgba(255,255,255,.14); }
+#banner #languageSwitch {
+  order: 1;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  width: auto;
+  height: 34px;
+  padding: 3px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 8px;
+  background: rgba(96,29,4,.12);
+  font-size: 0;
+}
+#banner #languageSwitch span {
+  display: inline-block;
+  padding: 7px 9px;
+  border-radius: 5px;
+  color: #fff !important;
+  font: 600 12px/20px "Segoe UI", Arial, sans-serif;
+  cursor: pointer;
+}
+#banner #languageSwitch span:hover,
+#banner #languageSwitch span:focus { background: rgba(255,255,255,.18); }
+#banner #languageSwitch img {
+  filter: grayscale(1) invert(1) brightness(2);
+  mix-blend-mode: screen;
+}
+#banner #logOff {
+  position: relative;
+  top: auto;
+  right: auto;
+  order: 2;
+  width: 82px;
+  height: 40px;
+  margin: 0 !important;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,.45);
+  border-radius: 8px;
+  background: rgba(255,255,255,.1);
+}
+#banner #logOff:hover,
+#banner #logOff:focus { background: rgba(255,255,255,.22); }
+#banner #LogOffLnk {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  height: 38px;
+  min-height: 38px;
+  color: #fff !important;
+  font: 600 13px/1 "Segoe UI", Arial, sans-serif;
+}
+#banner #LogOffLnk::before {
+  display: inline-block;
+  font: 700 19px/1 "Segoe UI Symbol", "Segoe UI", sans-serif;
+}
+@media screen and (max-width: 1020px) {
+  #banner .timeArea { left: 145px; font-size: 11px; }
+  #banner #banner_switchArea { right: 12px; gap: 5px; }
+  #banner #quicksetup > div { padding: 9px 7px; }
+  #banner #languageSwitch span { padding: 7px 6px; }
+}

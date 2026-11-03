@@ -8,3 +8,6 @@
 .venv*/
 *.spec
 *.tmp
+**/.local-admin-token
+**/objetos_build/
+Atuamax/experimental_dns/upstream/dnsmasq-2.91/
