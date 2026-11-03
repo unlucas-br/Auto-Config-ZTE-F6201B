@@ -1,6 +1,5 @@
 """Offline integrity and theme/restore checks for both brands and firmware profiles."""
 
-from hashlib import sha256
 from pathlib import Path
 import subprocess
 import sys
@@ -33,18 +32,9 @@ def verify_brand(brand: str) -> None:
     print(f"{brand}: pacote Windows íntegro")
 
 
-def verify_firmware() -> None:
-    for line in (ROOT / "firmware/SHA256SUMS.txt").read_text(encoding="ascii").splitlines():
-        expected, relative = line.split("  ", 1)
-        path = ROOT / "firmware" / relative
-        assert sha256(path.read_bytes()).hexdigest() == expected
-        print(f"{relative}: SHA-256 OK")
-
-
 if __name__ == "__main__":
     if len(sys.argv) == 2:
         verify_brand(sys.argv[1])
     else:
-        verify_firmware()
         for name in ("Atuamax", "Netflex"):
             subprocess.run([sys.executable, str(Path(__file__).resolve()), name], check=True)

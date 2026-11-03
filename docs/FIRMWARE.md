@@ -1,33 +1,15 @@
-# Imagens de firmware de referência
+# Referências de firmware sem distribuição de imagens
 
-## Origem
+Os perfis N6 e N7 foram preparados a partir de leituras locais dos bancos `mtd7` e `mtd8` de ONTs ZXHN F6201B UNI usadas nos testes. Os dumps e os backups completos permanecem fora deste repositório. O projeto publica apenas metadados necessários para reconhecer o layout e conferir o equipamento conectado.
 
-Os arquivos foram obtidos por **leitura** dos bancos `mtd7` e `mtd8` de ONTs ZXHN F6201B UNI às quais havia acesso administrativo e Telnet temporário. O acesso Telnet foi gerado pelo fluxo de modo de fábrica autenticado com as credenciais web informadas durante os testes. As leituras foram feitas antes de preparar cada gravação, com backup e conferência de hash.
+| Versão | Região analisada | Tamanho | SHA-256 da imagem base |
+| --- | --- | ---: | --- |
+| N6 | `mtd7`/`mtd8`, a partir do offset `131072` | 26.738.688 bytes | `4dfa5a48783f28c4a122aea97e490e9670b1f50590062bd014d00d29229476ad` |
+| N7 | `mtd7`, a partir do offset `0` | 27.131.904 bytes | `94d75b8039a416b3861ec5d5d332076d32026c5c74f8f98a05396b3304cdd0fd` |
+| N7 | `mtd8`, a partir do offset `0` | 27.131.904 bytes | `f11c698b78fb10951509b0b145b90819b8ea03f4648cbdaf660f5929f29c0782` |
 
-As imagens deste diretório são somente a região da **imagem base do banco**. Blocos de personalização, configuração operacional, backups completos e dados de uma ONT específica ficaram fora do repositório.
+No N6, os dois bancos analisados tinham o mesmo SHA-256. No N7, os bancos tinham hashes distintos. Os valores também constam dos perfis das marcas para validação durante o uso.
 
-| Versão | Arquivo | Recorte da partição | Tamanho | SHA-256 |
-| --- | --- | --- | ---: | --- |
-| N6 | [`bank_image.bin`](../firmware/V9.3.10P7N6/bank_image.bin) | `mtd7`, offset `131072` | 26.738.688 bytes | `4dfa5a48783f28c4a122aea97e490e9670b1f50590062bd014d00d29229476ad` |
-| N7 | [`mtd7_bank_image.bin`](../firmware/V9.3.10P7N7/mtd7_bank_image.bin) | `mtd7`, offset `0` | 27.131.904 bytes | `94d75b8039a416b3861ec5d5d332076d32026c5c74f8f98a05396b3304cdd0fd` |
-| N7 | [`mtd8_bank_image.bin`](../firmware/V9.3.10P7N7/mtd8_bank_image.bin) | `mtd8`, offset `0` | 27.131.904 bytes | `f11c698b78fb10951509b0b145b90819b8ea03f4648cbdaf660f5929f29c0782` |
+O utilitário lê `/proc/cmdline` para identificar o banco ativo, compara a região encontrada na própria ONT com o hash esperado e verifica o layout JFFS2 antes de preparar qualquer gravação. O nome da versão sozinho não autoriza uma alteração.
 
-No N6, as imagens base lidas de `mtd7` e `mtd8` tinham o mesmo SHA-256. No N7, os bancos tinham hashes distintos e ambos constam aqui. Os hashes também estão em [`SHA256SUMS.txt`](../firmware/SHA256SUMS.txt) e nos perfis das duas marcas.
-
-## Como conferir
-
-No PowerShell:
-
-```powershell
-Get-FileHash .\firmware\V9.3.10P7N6\bank_image.bin -Algorithm SHA256
-Get-FileHash .\firmware\V9.3.10P7N7\mtd7_bank_image.bin -Algorithm SHA256
-Get-FileHash .\firmware\V9.3.10P7N7\mtd8_bank_image.bin -Algorithm SHA256
-```
-
-O utilitário lê `/proc/cmdline` para identificar o banco ativo, compara a região de firmware com o hash esperado, verifica o layout JFFS2 e só então considera um bloco vazio no banco inativo. Em N6, uma variante com cabeçalho de firmware é reconhecida mediante validação do conteúdo e CRC. O nome da versão sozinho não autoriza a gravação.
-
-**Estes `.bin` não são arquivos de atualização da interface web.** Não os envie pela página de upgrade e não grave uma imagem de referência inteira em uma ONT. Eles também não substituem um backup próprio da ONT.
-
-## Limites de publicação
-
-Os arquivos vêm de firmware ZTE. Esta documentação descreve sua proveniência técnica e os hashes; não declara titularidade nem licença sobre o firmware do fabricante. Antes de tornar o repositório público, confira os direitos de redistribuição aplicáveis.
+As imagens do fabricante não são fornecidas, nem fazem parte dos pacotes Windows. Para reparar ou atualizar uma ONT, use os meios e arquivos autorizados para o equipamento.

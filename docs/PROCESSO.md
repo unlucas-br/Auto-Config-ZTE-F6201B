@@ -12,7 +12,7 @@
 - Foram lidas as regiões `mtd7` e `mtd8` de ONTs com firmware `V9.3.10P7N6` e `V9.3.10P7N7`.
 - Os arquivos web foram localizados no sistema de arquivos JFFS2. A análise identificou os inodes, as versões dos nós, os tamanhos de página e os blocos reservados para sobreposição.
 - O banco ativo passou a ser determinado pelo marcador de U-Boot em `/proc/cmdline`, com checagem cruzada da região indicada.
-- O perfil de cada versão registra hashes da imagem base, tamanhos, offsets, metadados dos arquivos e hashes dos recursos. As imagens de referência e seus recortes estão documentados em [FIRMWARE.md](FIRMWARE.md).
+- O perfil de cada versão registra hashes da imagem base, tamanhos, offsets, metadados dos arquivos e hashes dos recursos. A proveniência das leituras e os recortes estão documentados em [FIRMWARE.md](FIRMWARE.md); os dumps permanecem locais.
 
 ## 3. Personalização persistente
 

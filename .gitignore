@@ -11,3 +11,6 @@
 **/.local-admin-token
 **/objetos_build/
 Atuamax/experimental_dns/upstream/dnsmasq-2.91/
+firmware/
+**/bank_image.bin
+**/mtd*_bank_image.bin

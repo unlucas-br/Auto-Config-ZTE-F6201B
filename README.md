@@ -108,7 +108,6 @@ Os backups de cada execução ficam na pasta `backups/` ao lado do programa e **
 ├── Atuamax/                # fonte, temas N6/N7 e pacote Windows da Atuamax
 │   └── experimental_dns/    # painel DNS experimental, binários ARM e código-fonte
 ├── Netflex/                # fonte, temas N6/N7 e pacote Windows da Netflex
-├── firmware/               # imagens de banco de referência e SHA-256
 ├── docs/                   # obtenção, processo e build
 └── README.md
 ```
@@ -121,7 +120,7 @@ As pastas das marcas são independentes. Para criar outra, copie uma delas, ajus
 
 ## Firmware
 
-As imagens em [`firmware/`](firmware/) são **leituras de bancos de referência** de ONTs F6201B analisadas neste projeto. Não são pacotes de atualização para upload na interface web. A origem, os recortes, os tamanhos e os SHA-256 estão em [FIRMWARE.md](docs/FIRMWARE.md); a sequência de desenvolvimento e validação está em [PROCESSO.md](docs/PROCESSO.md).
+Os dumps de firmware usados na análise **não são distribuídos** neste repositório. [FIRMWARE.md](docs/FIRMWARE.md) registra apenas a proveniência, o layout e os hashes necessários à validação; [PROCESSO.md](docs/PROCESSO.md) descreve a sequência de desenvolvimento.
 
 As builds só gravam quando o modelo, a versão, a imagem base, o banco ativo e o espaço de destino passam pelas validações. Um firmware com o mesmo nome de versão, mas conteúdo diferente, pode ser recusado.
 
@@ -131,6 +130,6 @@ As builds só gravam quando o modelo, a versão, a imagem base, o banco ativo e 
 
 ## English
 
-This repository contains Windows GUI customizers for the ZTE ZXHN F6201B UNI, with separate Atuamax and Netflex themes. It supports the validated N6 and N7 firmware layouts, backs up and checks both boot banks, and adds a 2-second Wi-Fi client RSSI refresh. The files under `firmware/` are reference bank reads, **not** web-upgrade packages. Device backups and credentials are not included.
+This repository contains Windows GUI customizers for the ZTE ZXHN F6201B UNI, with separate Atuamax and Netflex themes. It supports the validated N6 and N7 firmware layouts, backs up and checks both boot banks, and adds a 2-second Wi-Fi client RSSI refresh. Manufacturer firmware dumps, device backups and credentials are not included.
 
 See the Portuguese sections above for installation, supported versions, usage and technical documentation.

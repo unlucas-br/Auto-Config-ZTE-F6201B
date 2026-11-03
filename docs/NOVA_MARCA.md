@@ -7,4 +7,4 @@
 5. Gere a build da nova pasta com os mesmos parâmetros de `build.ps1`, ajustando o nome do EXE e do ZIP.
 6. Teste em uma ONT compatível: identificação, backup, gravação e leitura após cada banco, login, menus, RSSI e reset físico.
 
-Cada marca fica autocontida. O firmware de referência em `firmware/` é comum; os backups criados durante testes e produção permanecem locais.
+Cada marca fica autocontida. Os dumps de referência e os backups criados durante testes e produção permanecem locais, fora do repositório.
